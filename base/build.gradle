@@ -1,0 +1,75 @@
+apply from: '../base.gradle'
+
+import com.xlu.buildsrc.*
+
+
+android {
+
+
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Android
+    api Dependency.DependencyImp.AppCompat
+    api Dependency.DependencyImp.Material
+    api Dependency.DependencyImp.AndroidXLegacy
+    api Dependency.DependencyImp.ActivityKtx
+    api Dependency.DependencyImp.FragmentKtx
+    api Dependency.DependencyImp.MultiDex
+    //Kotlin
+    api Dependency.DependencyImp.Kotlin
+    api Dependency.DependencyImp.CoreKtx
+    //Kotlin协程核心库
+    api Dependency.DependencyImp.CoroutinesCore
+    api Dependency.DependencyImp.CoroutinesAndroid
+    //navigation
+    api Dependency.DependencyImp.NavigationFragment
+    api Dependency.DependencyImp.NavigationUI
+    //lifecycle
+    api Dependency.DependencyImp.Lifecycle
+    api Dependency.DependencyImp.LifecycleService
+    kapt Dependency.DependencyImp.LifecycleCompilerAPT
+    api Dependency.DependencyImp.Livedata
+    api Dependency.DependencyImp.ViewModel
+    api Dependency.DependencyImp.StartUp
+
+
+    /*-------核心工具库-------*/
+    // mmkv
+    api Dependency.DependencyImp.MMKV
+    //LeakCanary
+    api Dependency.DependencyImp.LeakCanary
+    // Glide
+    api Dependency.DependencyImp.Glide
+    kapt Dependency.DependencyImp.GlideKapt
+    //glide图片变换库
+    api Dependency.DependencyImp.GlideTran
+    //okhttp
+    api Dependency.DependencyImp.OkHttp
+    api Dependency.DependencyImp.OkHttpInterceptorLogging
+    //Retrofit
+    api Dependency.DependencyImp.Retrofit
+    api Dependency.DependencyImp.RetrofitConverter
+    api Dependency.DependencyImp.Retrofitscalars
+    api Dependency.DependencyImp.Retrofitadapter
+    //gson
+    api Dependency.DependencyImp.Gson
+
+
+    /*------------视图-----------------*/
+    api Dependency.DependencyImp.RecyclerView
+    api Dependency.DependencyImp.BRVA
+    api Dependency.DependencyImp.Viewpager2
+    api Dependency.DependencyImp.ConstraintLayout
+    api Dependency.DependencyImp.ShadowLayout
+    api Dependency.DependencyImp.Lottie
+    api Dependency.DependencyImp.ToastBox
+    api Dependency.DependencyImp.StatusBar
+
+    //https://github.com/hi-dhl/Binding/blob/main/doc/README_CN.md
+    api 'com.hi-dhl:binding:1.1.3'
+}
