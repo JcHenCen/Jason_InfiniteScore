@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">InfiniteScore</string>
+    <string name="app_name">何止乐谱</string><!--InfiniteScore-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

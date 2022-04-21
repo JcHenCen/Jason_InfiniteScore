@@ -42,6 +42,6 @@ android {
 
 dependencies {
     implementation project(path: ':base')
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    debugImplementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 }
