@@ -8,8 +8,8 @@ import androidx.viewpager.widget.ViewPager
 /**
  *Nmae:VeStrong
  *Time：2022/4/27
- *Author:贾晨
- *function:类功能
+ *Author:Jason
+ *function:vp禁止滑动
  * NoScrollViewPager
  */
 class NoScrollViewPager : ViewPager {
