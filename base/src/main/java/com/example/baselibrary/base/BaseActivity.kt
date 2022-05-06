@@ -2,6 +2,7 @@ package com.example.baselibrary.base
 
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -24,6 +25,11 @@ abstract class BaseActivity(@LayoutRes private val layout: Int? = null) : AppCom
         layout?.let {
             setContentView(it)
         }
+        //设置状态栏黑色字体 背景透明
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+
+
         initStatusBar()
         _initData(savedInstanceState)
     }
@@ -63,6 +69,20 @@ abstract class BaseActivity(@LayoutRes private val layout: Int? = null) : AppCom
             ActivityStack.currentActivity?.darkMode(isWhite)
         }
     }
+
+    /**
+     * 界面设置状态栏字体颜色
+     */
+    open fun changeStatusBarTextImgColor(isBlack: Boolean) {
+        if (isBlack) {
+            //设置状态栏黑色字体
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        } else {
+            //恢复状态栏白色字体
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
+        }
+    }
+
 
     override fun onDestroy() {
         lifecycleScope.cancel()
