@@ -62,6 +62,8 @@ dependencies {
 
     implementation 'com.tencent:mmkv-static:1.0.23'
 
+    implementation 'com.facebook.fresco:fresco:0.14.1'
+
 
     // Banner
     implementation 'com.youth.banner:banner:2.1.0'
