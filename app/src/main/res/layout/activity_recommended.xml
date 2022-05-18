@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.RecommendedActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/title_back"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="24dp"
+            android:text="为您推荐"
+            android:textSize="17sp"
+            android:textColor="#ff222222"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_recommend_more"
+        tools:itemCount="1"
+        />
+
+
+
+
+</LinearLayout>

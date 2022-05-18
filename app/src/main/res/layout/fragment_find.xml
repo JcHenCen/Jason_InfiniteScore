@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.FindFragment">
 
 
@@ -14,8 +15,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@mipmap/discover_bg_top"
-            />
+            android:background="@mipmap/discover_bg_top" />
 
 
         <TextView
@@ -90,6 +90,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_recommend_more"
                     android:layout_width="25dp"
                     android:layout_height="17dp"
                     android:text="更多"
@@ -109,11 +110,15 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_recommended"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/for_you_more"
-                android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_15"
+                tools:listitem="@layout/item_recommend_list"
+                tools:itemCount="6"
+                app:layoutManager="GridLayoutManager"
+                android:orientation="horizontal"
                 />
 
         </RelativeLayout>
@@ -173,6 +178,10 @@
                 android:layout_below="@+id/classical_more"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginLeft="20dp"
+                tools:listitem="@layout/item_recommend_list"
+                tools:itemCount="4"
+                app:layoutManager="GridLayoutManager"
+                android:orientation="horizontal"
                 />
 
         </RelativeLayout>
@@ -232,6 +241,10 @@
                 android:layout_below="@+id/hot_more"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginLeft="20dp"
+                tools:listitem="@layout/item_recommend_list"
+                tools:itemCount="4"
+                app:layoutManager="GridLayoutManager"
+                android:orientation="horizontal"
                 />
 
         </RelativeLayout>
@@ -243,7 +256,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rl_hot"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="30dp"
+            tools:listitem="@layout/item_recommend_list"
+            tools:itemCount="4"
+            app:layoutManager="GridLayoutManager"
+            android:orientation="horizontal"
+            />
 
         <!--好友的乐谱-->
         <RelativeLayout
@@ -301,6 +319,10 @@
                 android:layout_below="@+id/hot_friend"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginLeft="20dp"
+                tools:listitem="@layout/item_recommend_list"
+                tools:itemCount="4"
+                app:layoutManager="GridLayoutManager"
+                android:orientation="horizontal"
                 />
 
         </RelativeLayout>
